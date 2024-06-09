@@ -1,0 +1,12 @@
+<?php
+
+use CodeIgniter\Router\RouteCollection;
+
+/**
+ * @var RouteCollection $routes
+ */
+$routes->get('/', 'Home::index');
+
+$routes->group('', ['filter' => 'login'], function($routes) {
+    $routes->get('/home', 'Home::home');
+});

@@ -1,0 +1,28 @@
+CI 4 -> bisa ditaruh difolder mana saja, tidak harus di htdocs (karena dia sudah punya server sendiri) tapi tetap butuh web server kayak xampp buat jalanin PHP nya.
+
+buat jalanin di localhost harus pake terminal
+ 
+pake script ini :
+php spark serve
+
+untuk authentikasi, pake package tambahan dari github:
+git clone https://github.com/lonnieezell/myth-auth.git
+
+login masuk akun
+username : mefitria30
+password : 123456ABC@@
+
+(kalau buat akun baru, force active akun dari phpmyadmin)
+
+php spark -> menampilkan semua list command
+*ini buat migrate table baru:
+php spark make:migration todo
+
+*Kalau udah jalanin command ini:
+php spark migrate
+
+*ini buat refresh dan rollback (ini mirip ngebatalin atau undo)
+php spark migrate:refresh
+
+* buat balikin
+php spark migrate -all 
